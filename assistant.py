@@ -46,7 +46,7 @@ def transcribe_audio(audio_file):
 # Interazione con Llama (assumendo che sia già installato)
 def generate_response_from_llama(input_text):
     # Esegui il comando di Llama per generare la risposta
-    llama_command = f"ollama run llama3.2 \"{input_text}\""
+    llama_command = f"ollama run smollm:135m \"{input_text}\""
     print(f"Chiamando Llama con il testo: {input_text}")
     result = subprocess.run(llama_command, shell=True, capture_output=True, text=True)
     if result.returncode == 0:
