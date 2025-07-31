@@ -12,6 +12,6 @@ print(os.path.exists(config_path))
 voice = PiperVoice.load(model_path, config_path)
 
 # Apri un file WAV per scrivere l'audio sintetizzato
-with wave.open("output.wav", "wb") as wav_file:
+with wave.open("response.wav", "wb") as wav_file:
     # Sintetizza il testo in un file WAV
     voice.synthesize("Ciao, questa è la mia voce. Come posso aiutarti?", wav_file)

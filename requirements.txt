@@ -22,7 +22,7 @@ oyaml==1.0
 pandas==2.2.3
 pephubclient==0.4.5
 peppy==0.40.7
-piper-tts==1.2.0
+piper-tts
 pipestat==0.12.1
 psutil==7.0.0
 pycparser==2.22
