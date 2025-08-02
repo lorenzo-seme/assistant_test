@@ -15,7 +15,7 @@ class Transcriber:
             transcribe(audio_file: str) -> str:
                 Transcribes the given audio file and returns the recognized text.
     """
-    def __init__(self, model_size="small", language="it"):
+    def __init__(self, model_size="small", language="en"):
         """
             Initializes the Transcriber with the specified model size and language.
 
@@ -37,5 +37,5 @@ class Transcriber:
                 str: The transcribed text.
         """
         model = whisper.load_model(self.model_size)
-        result = model.transcribe(audio_file, language=self.language)
+        result = model.transcribe(audio=audio_file, language=self.language)
         return result['text']

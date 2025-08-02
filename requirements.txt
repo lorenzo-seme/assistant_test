@@ -49,3 +49,6 @@ ubiquerg==0.8.1
 urllib3==2.4.0
 openai-whisper==20240930
 yacman==0.9.3
+
+pvporcupine~=3.0.5
+PyAudio~=0.2.14

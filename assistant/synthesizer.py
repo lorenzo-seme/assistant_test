@@ -45,7 +45,7 @@ class Synthesizer:
         with wave.open(filename, "wb") as wf:
             wf.setnchannels(1)  # Mono
             wf.setsampwidth(2)  # 16-bit PCM = 2 bytes
-            wf.setframerate(22050)  # Frequenza tipica per Piper (verifica dal tuo config)
+            wf.setframerate(16000)  # Frequenza tipica per Piper (verifica dal tuo config)
 
             for chunk in audio_chunks:
                 wf.writeframes(chunk.audio_int16_bytes)

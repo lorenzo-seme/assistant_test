@@ -1,3 +1,4 @@
+import os
 import wave
 
 import sounddevice as sd
@@ -52,6 +53,9 @@ class Recorder:
                     audio_data: NumPy array containing the recorded audio.
                     filename (str): The filename where the audio will be saved.
         """
+        if not os.path.exists(os.path.dirname(filename)):
+            os.makedirs(os.path.dirname(filename))
+
         with wave.open(filename, "wb") as wf:
             wf.setnchannels(1)
             wf.setsampwidth(2)

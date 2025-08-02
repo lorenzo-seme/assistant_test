@@ -16,6 +16,7 @@ class Generator:
 
     def __init__(self, model="smollm:135m"):
         self.model = model
+        self.instructions = "Answer briefly and politely. Maximum 15 seconds answers. "
 
     def generate(self, input_text):
 
@@ -23,7 +24,7 @@ class Generator:
             "http://localhost:11434/api/generate",
             json={
                 "model": self.model,
-                "prompt": input_text,
+                "prompt": self.instructions+input_text,
                 "stream": False
             }
         )
